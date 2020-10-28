@@ -1,6 +1,5 @@
 """
 Replace the placeholders below with your info inside of the ticks.
-
 Currently supported carriers:
   att
   tmobile
