@@ -35,8 +35,8 @@ class SMS:
             self.server.ehlo()
             self.server.login(self.username, self.password)
 
-        except smtplib.SMTPException as exc:
-            print(f'initialize_server error: {exc}')
+        except Exception as e:
+            print(f'initialize_server error: {e}')
 
     def send(self, message):
         try:

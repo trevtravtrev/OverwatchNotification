@@ -13,7 +13,7 @@ def check_screen():
         print(f'check_screen error: {e}')
 
 
-def main():
+def main(continuous_mode):
     print("Overwatch Notification is now running...")
     sms = SMS(config.number, config.carrier, config.email, config.password)
 
@@ -24,8 +24,12 @@ def main():
             print("Overwatch game starting detected...")
             sms.send("Your Overwatch game is starting!")
             print("Notification has been sent to your phone.")
+
+            if not continuous_mode:
+                return print("Overwatch Notification has terminated.")
+
             sleep(10)
 
 
 if __name__ == '__main__':
-    main()
+    main(False)

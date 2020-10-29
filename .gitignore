@@ -1,3 +1,6 @@
+# bat files
+*.bat
+
 # ignore pycharm files
 *.idea
 
