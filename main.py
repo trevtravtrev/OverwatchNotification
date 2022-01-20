@@ -14,14 +14,14 @@ def check_screen():
 
 
 def main(continuous_mode):
-    print("Overwatch Notification is now running...")
+    print("\n\nOverwatch Notification is now running...")
     sms = SMS(config.number, config.carrier, config.email, config.password)
 
     while True:
         game_found = check_screen()
 
         if game_found:
-            print("Overwatch game starting detected...")
+            print("\nOverwatch game starting detected...")
             sms.send("Your Overwatch game is starting!")
             print("Notification has been sent to your phone.")
 
